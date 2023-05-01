@@ -25,21 +25,11 @@ ReactDOM.render(
       <GlobalStyle />
       <Header />
       <Routes>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/survey/:questionNumber">
-          <Survey />
-        </Route>
-        <Route path="/results">
-          <Results />
-        </Route>
-        <Route path="/freelances">
-          <Freelances />
-        </Route>
-        <Route>
-          <Error />
-        </Route>
+      <Route path="/" exact element={<Home />} />
+        <Route path="/Freelances" element={<Freelances />} />
+        <Route path="/Survey" element={<Survey />} />
+        <Route path="/Results" element={<Results />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </Router>
   </React.StrictMode>,
